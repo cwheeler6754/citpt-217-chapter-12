@@ -27,13 +27,7 @@
     console.log('Setting input handler for form');
     this.$formElement.on('input', '[name="emailAddress"]', function (event) {
       var emailAddress = event.target.value;
-      var message = '';
-      if (fn(emailAddress)) {
-        event.target.setCustomValidity('');
-      } else {
-        message = emailAddrress + ' is not an authorized email address!'
-        event.target.setCustomValidity(message);
-      }
+      console.log(fn(emailAddress));
     });
   };
 
